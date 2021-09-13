@@ -1,0 +1,3 @@
+/home/user/Desktop/zmq_exchange_messages/test3_img_pyserver/ClientProgram/tmp/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/zmq_exchange_messages/test3_img_pyserver/ClientProgram/tmp/CMakeFiles/ZmqProject.dir
+/home/user/Desktop/zmq_exchange_messages/test3_img_pyserver/ClientProgram/tmp/CMakeFiles/edit_cache.dir
