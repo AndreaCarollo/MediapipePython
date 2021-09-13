@@ -1,0 +1,3 @@
+/home/user/Desktop/zmq_exchange_messages/test2_image/ServerProgram/tmp/CMakeFiles/rebuild_cache.dir
+/home/user/Desktop/zmq_exchange_messages/test2_image/ServerProgram/tmp/CMakeFiles/ZmqProject.dir
+/home/user/Desktop/zmq_exchange_messages/test2_image/ServerProgram/tmp/CMakeFiles/edit_cache.dir
