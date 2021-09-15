@@ -6,6 +6,7 @@
 std::string req_elaboration = "py req elaboration image";
 std::string server_send_img = "send image";
 std::string server_elaboration_done = "elaboration done";
+std::string req_close_server = "kill";
 
 int main()
 {
@@ -22,7 +23,7 @@ int main()
 
     // cv::Mat test_img = cv::imread("../test.png"); // , cv::IMREAD_GRAYSCALE);
     cv::Mat test_img;
-    cv::VideoCapture cap("../video.mp4");
+    cv::VideoCapture cap("../video2.mp4");
 
     cap >> test_img;
     int height = test_img.rows;
@@ -39,8 +40,8 @@ int main()
 
         test_img.convertTo(test_img, CV_8UC3);
         cv::imshow("img c++", test_img);
-        cv::waitKey(1);
-        cv::destroyAllWindows();
+        cv::waitKey(-1);
+//        cv::destroyAllWindows();
 
         zmq::message_t request, request_2, request_3;
         std::string replyMessage;
@@ -70,6 +71,10 @@ int main()
             }
         }
     }
+        std::string msgToServer(req_close_server);
+        zmq::message_t reply(msgToServer.size());
+        memcpy((void *)reply.data(), (msgToServer.c_str()), msgToServer.size());
+        socket.send(reply);
 
     return 0;
 }

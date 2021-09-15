@@ -8,17 +8,20 @@ import mediapipe as mp
 import detector_pedestrian as dp
 
 
+
 context = zmq.Context()
 socket = context.socket(zmq.REP)
 port = "5555"
 socket.bind("tcp://*:5555") # % port)
 req_elaboration = "py req elaboration image"
 # fix dimension for the moment
-width = 1080; # My image width
-height = 1920; # My image height
+# width = 1080; # My image width
+# height = 1920; # My image height
+width = 848; # My image width
+height = 480; # My image height
 
 # init detector
-detector = pm.PoseDetector(True,False,False,0.5,0.0)
+detector = pm.PoseDetector(False,False,False,0.5,0.0)
 pedestrian = dp.PedestrianDetector()
 
 while True:
@@ -48,5 +51,7 @@ while True:
 
         socket.send_string("elaboration done")
         print("elaboration done")
+    elif request == "kill":
+        break;
 
 
