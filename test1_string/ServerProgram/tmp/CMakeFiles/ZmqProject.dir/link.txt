@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11  -rdynamic CMakeFiles/ZmqProject.dir/main.cpp.o  -o ZmqProject -Wl,-rpath,/usr/local/lib /usr/local/lib/libzmq.so 
